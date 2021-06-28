@@ -1,9 +1,8 @@
 from random import random
-
 from game.player import *
+from abc import ABC, abstractmethod
 
-
-class Game:
+class Game(ABC):
 
     def __init__(self) -> None:
         """
@@ -15,9 +14,11 @@ class Game:
     def __str__(self) -> str:
         return f"Esto es el objeto Game"
 
+    @abstractmethod
     def start(self) -> bool:
         pass
-
+    
+    @abstractmethod
     def end(self) -> bool:
         pass
 

@@ -1,7 +1,7 @@
 
 
 class Player:
-
+  
     def __init__(self, nombre, id) -> None:
         """
         Contructor.

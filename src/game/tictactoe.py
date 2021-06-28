@@ -9,3 +9,6 @@ class TicTacToeGame(Game):
     def start(self) -> bool:
         myVariable = True
         return myVariable and super().start()
+    
+    def end(self) -> bool:
+        return super().end()

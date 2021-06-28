@@ -9,14 +9,14 @@ def main():
     main() -> None
     """
 
-    print(factorial(-3))
+    print(factorial(3))
 
     myPlayer1 = Player("Ale", 1)
     myPlayer2 = Player("Lolo", 2)
 
     print(f"Player1: {myPlayer1} and Player2: {myPlayer2}")
 
-    myGame = MyProGame()
+    myGame = TicTacToeGame()
 
     myGame.player1 = myPlayer1
     myGame.player2 = myPlayer2
