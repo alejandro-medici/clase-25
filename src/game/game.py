@@ -38,6 +38,7 @@ class Game(ABC):
     def player2(self, player):
         self.__player2 = player
 
+    @abstractmethod
     def update(self) -> bool:
         self.player2.score = random() * 10
         self.player1.score = random() * 10
