@@ -39,3 +39,30 @@ def complex(real=0.0, imag=0.0):
     """
     if imag == 0.0 and real == 0.0:
         return complex_zero
+
+
+def useless(func):
+    #inner functions
+    def other(x):
+        x = x * 2
+        return func(x)
+    return other
+
+def factorial_decorator(func):
+    def checker(x):
+        if type(x) == int and x >= 0:
+            return func(x)
+        else:
+            raise TypeError("Error, no se puede realizar operacion")
+    return checker
+
+#@useless #useless(factorial(4)) <- #reemaplaza en todas las a factorial
+@factorial_decorator
+def factorial(x):
+    if x == 0:
+        return 1
+    else:
+        return x * factorial(x - 1)
+
+
+

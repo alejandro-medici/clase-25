@@ -1,4 +1,4 @@
-#from math.utils import *
+from ale.utils import factorial
 from game.game import *
 from game.tictactoe import *
 from game.player import *
@@ -8,7 +8,9 @@ def main():
     """
     main() -> None
     """
-    
+
+    print(factorial(-3))
+
     myPlayer1 = Player("Ale", 1)
     myPlayer2 = Player("Lolo", 2)
 
